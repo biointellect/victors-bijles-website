@@ -1,6 +1,6 @@
 // config.js for all variables that need to be changed
 const siteData = {
-    naam: "Victor's Bijles",
+    name: "Victor's Bijles",
     pricePerHour: "€15",
     phoneNumber: "31634420848",
     mailAdress: "victor@lamain.nl",
