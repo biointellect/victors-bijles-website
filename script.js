@@ -50,5 +50,36 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
     }
 
+    // Pricing cards
+    const pricingContainer = document.getElementById("pricing-cards");
+    if (pricingContainer) {
+        // Check if any open packages
+        if (siteData.packages) {
+            pricingContainer.innerHTML = siteData.packages.map(pkg => {
+                const waLink = `https://wa.me/${siteData.phoneNumber}`;
+                return `
+                    <div class="col-md-6 col-lg-5">
+                        <div class="card shadow-sm border-0 rounded-4 overflow-hidden h-100">
+                            <div class="card-header bg-dark text-white text-center py-4">
+                                <span class="badge ${pkg.badgeClass} text-uppercase px-3 py-2 mb-2">${pkg.badge}</span>
+                                <h2 class="display-4 fw-bold my-0">${pkg.price} <span class="fs-5 text-secondary fw-normal">${pkg.period}</span></h2>
+                            </div>
+                            <div class="card-body p-4 d-flex flex-column">
+                                <h4 class="fw-bold text-center mb-3">${pkg.title}</h4>
+                                <p class="py-2 border-bottom fw-semibold text-primary"><i class="bi bi-geo-alt-fill me-2"></i>${pkg.location}</p>
+                                <p class="text-secondary mb-4">${pkg.description}</p>
+                                <div class="d-grid gap-2 mt-auto">
+                                    <a href="#contact" class="btn btn-secondary btn-lg">
+                                        <i class="bi bi-chat-dots-fill me-2"></i>Neem contact op
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
 
+        }
+        // else {}
+    }
 });

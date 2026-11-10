@@ -9,5 +9,34 @@ const siteData = {
         { naam: "Natuurkunde", niveau: "MAVO / HAVO / VWO" },
         { naam: "Scheikunde", niveau: "MAVO / HAVO / VWO" },
         { naam: "Economie", niveau: "MAVO / HAVO / VWO" }
+    ],
+    packages: [
+        {
+            title: "1-op-1 Bijles",
+            badge: "Meest Gekozen",
+            badgeClass: "bg-primary",
+            price: "€15",
+            period: "/ uur",
+            location: "Op school of thuis (in Bergen)",
+            description: "Volledige focus op jouw tempo en jouw specifieke struikblokken."
+        },
+        {
+            title: "7-Rittenkaart Examen",
+            badge: "Voordeligst",
+            badgeClass: "bg-danger",
+            price: "€100",
+            period: "/ 7 uur",
+            location: "Op school of thuis (in Bergen)",
+            description: "Intensive examentraining om alle examenstof gestructureerd door te nemen."
+        },
+        {
+            title: "Duo Bijles",
+            badge: "Samen Voordeliger",
+            badgeClass: "bg-success",
+            price: "€10",
+            period: "/ uur p.p.",
+            location: "Op school of thuis (in Bergen)",
+            description: "Samen met een klasgenoot leren met dezelfde persoonlijke begeleiding."
+        }
     ]
 };
