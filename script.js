@@ -82,4 +82,17 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         // else {}
     }
+
+
+    const subjectContainer = document.getElementById("subject-pills");
+    if (subjectContainer) {
+        subjectContainer.innerHTML = `
+            <div class="col-lg-8 text-center">
+                <div class="d-flex justify-content-center flex-wrap gap-2">
+                    <span class="badge bg-white text-dark border px-3 py-2 shadow-sm"><i class="bi bi-check-circle text-success me-1"></i>${siteData.subjects}</span>
+                    <span class="badge bg-white text-dark border px-3 py-2 shadow-sm"><i class="bi bi-check-circle text-success me-1"></i>${siteData.levels}</span>
+                </div>
+            </div>
+        `
+    }
 });
