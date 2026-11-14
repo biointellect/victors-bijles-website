@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             <li class="nav-item"><a class="nav-link ${currentPage == "index" ? "active" : ""}" href="index.html">Home</a></li>
                             <li class="nav-item"><a class="nav-link ${currentPage == "about" ? "active" : ""}" href="about.html">Over mij</a></li>
                             <li class="nav-item"><a class="nav-link ${currentPage == "pricing" ? "active" : ""}" href="pricing.html">Tarieven</a></li>
+                            <li class="nav-item"><a class="nav-link ${currentPage == "availability" ? "active" : ""}" href="availability.html">Beschikbaarheid</a></li>
                         </ul>
                     </div>
                 </div>
@@ -84,6 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
+    // Subject pills
     const subjectContainer = document.getElementById("subject-pills");
     if (subjectContainer) {
         subjectContainer.innerHTML = `
@@ -94,5 +96,34 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
             </div>
         `
+    }
+
+    // Grid Beschikbaarheid (3 weken x 7 dagen)
+    const gridContainer = document.getElementById("availability-grid-container");
+    if (gridContainer && siteData.availabilityGrid) {
+        gridContainer.innerHTML = siteData.availabilityGrid.map(week => `
+            <div class="card shadow-sm border rounded-4 bg-white p-4 mb-4">
+                <h5 class="fw-bold mb-3 text-secondary"><i class="bi bi-calendar-range text-primary me-2"></i>${week.weekLabel}</h5>
+                <div class="table-responsive">
+                    <table class="table table-bordered text-center align-middle mb-0" style="table-layout: fixed;">
+                        <thead>
+                            <tr class="table-light small text-muted">
+                                <th>Ma</th><th>Di</th><th>Wo</th><th>Do</th><th>Vr</th><th>Za</th><th>Zo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                ${week.days.map(day => `
+                                    <td class="p-3 ${day.available ? 'bg-primary bg-opacity-10' : ''}">
+                                        <div class="fw-bold small text-dark mb-1">${day.date}</div>
+                                        <div class="${day.available ? 'text-primary fw-semibold' : 'text-muted small'}" style="font-size: 0.8rem;">${day.slot}</div>
+                                    </td>
+                                `).join('')}
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        `).join('');
     }
 });

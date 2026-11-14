@@ -42,5 +42,5 @@ const siteData = {
             location: "Bv. andere locatie",
             description: "Overleg met mij voor een locatie, prijs, vak, en/of iets anders",
         },
-    ]
+    ],
 };
