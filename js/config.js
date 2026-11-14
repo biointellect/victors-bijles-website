@@ -4,6 +4,7 @@ const siteData = {
     phoneNumber: "31634420848",
     mailAdress: "victor@lamain.nl",
     subjects: "Wiskunde A/B, Natuurkunde, Scheikunde & Economie",
+    subjectsText: "Wiskunde, Natuurkunde, Scheikunde en Economie",
     levels: "Mavo, Havo en Vwo",
     packages: [
         {

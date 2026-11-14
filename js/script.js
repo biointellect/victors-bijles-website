@@ -126,4 +126,15 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
         `).join('');
     }
+
+    // Intro text on homepage
+    const introText = document.getElementById("intro-text-homepage");
+    if (introText && siteData.subjectsText) {
+        introText.innerHTML = `
+            <p class="lead text-muted col-lg-8 mx-auto mt-3">
+                Doelgerichte begeleiding in ${siteData.subjectsText}. Ga van stampen naar begrijpen.
+            </p>
+
+        `
+    }
 });
