@@ -1,5 +1,9 @@
 Todo
+- algemene voorwaarden
 - Replace home page subjects for modularity
 - center pills
-- over mij: vakken die ik gedaan heb en cijfers n
-- Booking system
+- Booking system 1/2
+- dark mode
+- robot.txt?
+- addmin page
+

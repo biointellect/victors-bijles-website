@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://biointellect.github.io/victors-bijles-website/sitemap.xml
+Tag: public
