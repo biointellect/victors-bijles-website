@@ -39,7 +39,7 @@ const siteData = {
             badgeClass: "bg-danger",
             price: "Prijs in overleg",
             period: "",
-            location: "Bv. andere locatie",
+            location: "Bv. locatie buiten Bergen",
             description: "Overleg met mij voor een locatie, prijs, vak, en/of iets anders",
         },
     ],
